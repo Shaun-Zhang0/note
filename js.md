@@ -226,6 +226,75 @@ $(document).load(function(){
 
 ## 字符串的方法
 
+```
+1.  String.prototype.anchor() 创建一个html <a></a> 锚点元素
+2.  String.prototype.bold() 创建一个<b>标签
+3.  String.prototype.charAt() 返回索引处的字符
+4.  String.prototype.concat() 拼接字符串
+5.  String.prototype.endsWith() 判断是否以指定字符串为结尾
+6.  String.prototype.startsWith() 判断是否以指定字符串为开头
+7.  String.prototype.includes() 判断是否包含指定字符串
+8.  String.prototype.indexOf() 返回给定字符串在原字符串中 返回首次出现的index值,找不到则返回 -1
+9.  String.prototype.lastIndexOf() 返回给定字符串在原字符串中最后一次出现的索引 , 找不到则返回 -1
+10. String.prototype.link() 用于创建一个超链接a标签
+11. String.prototype.padEnd() 接受两个参数 第一个参数是期望字符串的长度 第二个是不满足长度时 尾部拼接上去 直至满足长度
+12. String.prototype.padStart() 接受两个参数 第一个参数是期望字符串的长度 第二个是不满足长度时 头部拼接上去 直至满足长度
+13. String.prototype.repeat() 用于把字符串重复n次 接受一个参数 
+14. String.prototyoe.slice() 用于截取字符串的一部分 并返回新的字符串
+15. String.prototype.split() 用于分割字符串成数组 
+16. String.prototype.toLocaleUpperCase() 将字符串转换为大写
+17. String.prototype.toLocaleLowerCase() 将字符串转换为小写
+18. String.prototype.toString() 返回指定对象的字符串形式
+19. String.prototype.trim() 清除字符串两端的空白
+20. String.prototype.trimLeft() 清除字符串左端的空白
+21. String.prototype.trimRight() 清除字符串右端的空白
+22. String.prototype.replace() 替换字符串中的内容 并返回一个新的字符串
+
+```
+
+## dom0 和 dom2 事件处理
+
+1. dom0级 事件处理程序
+```
+        // 被认为是元素的方法 在元素的作用域中运行
+
+        <div id='btn'></div>
+        <script>
+            var node = document.getElementByid('btn');
+            node.onclick = function(){
+                console.log(this); // 会在事件冒泡流阶段被处理
+            }
+        </script>
+
+        
+```
+2. dom2级 事件处理
+
+```
+   // dom2 级事件处理提供了两个方法 addEventListerner() 和 removeEventListerner()
+   // 可以通过参数选择在冒泡流或者捕获流中执行
+        
+        <div id='btn'></div>
+        <script>
+            var node = document.getElementById('btn');
+            <!-- true - 事件捕获流中触发 -->
+            node.addEventListerner("click",function(){
+                console.log("事件捕获中触发")
+            },true);
+            <!-- false - 事件冒泡流中触发 -->
+            node.addEventListerner("click",function(){
+
+            },false)
+        </script>
+```
+
+## IE 事件处理
+
+```
+    // IE 提供了两个方法 attachEvent 和 deleteEvent , 作用分别是添加事件 和 删除事件
+
+
+```
 
 
 
