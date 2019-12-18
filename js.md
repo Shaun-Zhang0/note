@@ -190,7 +190,7 @@ $(document).load(function(){
 1. 消除JavaScript语法的不合理 不严谨的地方 减少怪异行为
 2. 消除代码运行的一些不安全之处 保证代码运行的安全
 3. 提高编译器的效率
-4. 为未来的新的版本的javas做好准备
+4. 为未来的新的版本的javaScript做好准备
 
 * 坏处
 
@@ -283,7 +283,7 @@ $(document).load(function(){
             },true);
             <!-- false - 事件冒泡流中触发 -->
             node.addEventListerner("click",function(){
-
+                console.log("事件冒泡中触发")
             },false)
         </script>
 ```
@@ -292,7 +292,7 @@ $(document).load(function(){
 
 ```
     // IE 提供了两个方法 attachEvent 和 deleteEvent , 作用分别是添加事件 和 删除事件
-
+    
 
 ```
 
