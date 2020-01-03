@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .block {
+            width: 500px;
+            height: 500px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block"></div>
+</body>
+<script>
+    let node = document.getElementsByClassName('block')[0];
+    node.addEventListener("touchstart", function () {
+        console.log('touchstart');
+    })
+    node.addEventListener("touchmove", function () {
+        console.log('touchmove');
+    })
+    node.addEventListener("touchend", function () {
+        console.log('touchend');
+    })
+    node.addEventListener("click", function () {
+        console.log('click');
+    })
+
+</script>
+
+</html>
